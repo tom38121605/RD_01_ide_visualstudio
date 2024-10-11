@@ -1,0 +1,91 @@
+
+Visual Studio 2022 Professional(专业版)：TD244-P4NB7-YQ6XK-Y8MMM-YWV2J
+Visual Studio 2022 Enterprise(企业版)：VHF9H-NXBBB-638P6-6JHCY-88JWH
+
+
+1. 下载免费社区版
+    。官方下载地址：https://visualstudio.microsoft.com/zh-hans/downloads/
+    。百度网盘下载链接: https://pan.baidu.com/s/1UnXDYrp_kbxX_7i6CHx0Bg?pwd=pf3g    提取码: pf3g
+    。下载的文件： VisualStudioSetup.exe
+
+
+2. 安装 - 初始安装  
+
+    。右键“VisualStudioSetup.exe”，管理员运行
+    。跳出界面visual studio installer，显示“开始之前，我们需要设置某些选项，以便你配置安装”， 点继续
+    。跳出界面”正在准备 Visual Studio安装程序“， 会安装一些东东，等待安装完成
+
+2. 安装 -安装选择  （注意要选择安装路径，不要安装在C盘，以免C盘空间不够）
+
+    。然后，再跳出一个界面，显示工作负荷，单个组件，语言包，安装位置等
+    。工作负荷： 选择开发环境，如c＃，C++, vbnet等  （也可暂时不选，以后再选择）
+   。工作负荷： 这里是c＃开发，选择“.NET desktop development” 组件（.NET 桌面开发组件）
+    。安装位置： 选择d盘，空间比较多的盘
+    。语言包： 英文
+    。其他一项： 默认
+    。选择下载时安装
+    。点击安装
+
+2. 安装 -安装ide
+
+    。跳出跳出界面visual studio installer
+    。显示： Visual Studio Community 2022
+    。默认选择 ”安装后启动“
+
+
+3. 打开  Visual Studio
+    。显示 ”登录  Visual Studio“
+    。点击： 暂时跳过此项
+    。开发设置： visual c＃
+    。主题颜色： 选浅色
+    。点击：启动 Visual Studio
+
+4. 创建第一个项目
+    。点击创建新项目
+    。最上面的下拉框，分别选择c#，windows
+    。再在下面选择“windows 窗体应用（.NET Framework)
+    。下一步
+    。项目名称： 如 VSprj1
+    。位置： d:\VS-test
+    。点击创建
+
+5. 编写第一个程序 ”hello world ！“
+    。菜单 视图  -- 工具箱  -- 所有windows窗体
+    。布局控件： 添加一个button控件和一个label控件
+    。双击button1控件， 進入代码编写窗口
+    。编写功能：点击button1按钮，label1显示“hello，world！”，并启动调试；
+    。编写代码： label1.text = "hello world";
+    。点击工具栏上面的右向三角形按钮"启动"按钮，运行程序
+    。点击button1按钮，label1显示"hello world" 
+
+6. ok
+
+
+7. 修改 visual studio的语言包
+    。在window是的搜索里面，输入 visual studio installer
+    。然后运行    visual studio installer
+
+
+
+
+
+
+
+
+
+
+
+===============其他安装网文参考=================
+
+
+https://cloud.tencent.com/developer/article/2338985
+https://blog.csdn.net/qq_45217381/article/details/142262177
+https://cloud.tencent.com/developer/article/2338985
+
+
+
+
+
+
+
+
