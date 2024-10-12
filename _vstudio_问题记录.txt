@@ -1,0 +1,31 @@
+
+1. 打开 项目时，提示如下：
+    Unsupported
+    This version of Visual Studio is unable to open the following projects. The project types may not be installed or this version of Visual Studio 
+     may not support them.
+    For more information on enabling these project types or otherwise migrating your assets, please see the details in the "Migration Report" 
+    displayed after clicking OK.
+	 - CNCTestApplicationInstaller, "D:\cnctestapp\cnctestapplication-1.3.1\CNCTestApplicationInstaller\CNCTestApplicationInstaller.vdproj"
+
+分析： 实际上出现此问题的原因是没有安装这个Installer打包工具
+解决： 点击ok即可，不影响其它功能的使用。   （待验证）
+
+
+2. 全部重新编译 CNCTestApplication,出现下面的提示
+   The referenced component 'System.Buffers' could not be found.
+解决： 把C:\workspace\cnctestapp_20231205_0995中的 System.Buffers.dll，拷贝到C:\Windows\SysWOW64中，再编译该warning消失  （待继续测试）
+补充： 同时， 另外几个warning也消失了， 如'System.Memory，Google.Protobuf， 其他的只剩下Ivi.Visa.Interop
+
+
+3. 全部重新编译 CNCTestApplication,出现下面的提示
+   The referenced component 'Ivi.Visa.Interop' could not be found.
+解决： 在National Instruments官网 https://lumen.ni.com/nicif/create.xhtml
+zhao 下载 visal的驱动，然后管理员安装，安装时去掉病毒防护，即ok
+
+
+5. 在安装ni-visa 的驱动文件 ni-visa_24.8_online.exe 时， 提示下面的错误信息
+    An error occurred while attempting to create the directory: C:\Users\Public\Documents\National Instruments
+解决：  打开windows安全中心 -- 病毒和威胁防护设置 -- 管理设置  -- 把实时保护，云保护，篡改防护都设置为关闭
+
+
+
