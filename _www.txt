@@ -8,6 +8,13 @@ zhao       //National Instruments官网
 
 
 
+--------------------------------
+
+3. Nuget工具：Nuget工具_1.0.3.1012.exe，最新版以及源代码详见  （待测试验证）
+   https://github.com/WindowsOrg/NugetEfficientTool
+
+
+
 =======================参考  ========================
 
 

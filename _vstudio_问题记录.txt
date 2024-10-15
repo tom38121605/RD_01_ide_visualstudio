@@ -28,4 +28,94 @@ zhao 下载 visal的驱动，然后管理员安装，安装时去掉病毒防护，即ok
 解决：  打开windows安全中心 -- 病毒和威胁防护设置 -- 管理设置  -- 把实时保护，云保护，篡改防护都设置为关闭
 
 
+6. 在打开cnctestapp时，在主界面出现下面的错误提示   
+
+      ---CNCTestApplication.cs[design] ----
+ 
+     Could not find type 'CNCTestApplication.LinearTestControl'. Please make sure that the assembly that contains this type is referenced. If this type is a part of your development project, make sure that the project has been successfully built using settings for your current platform or Any CPU.      
+      The variable 'linearTestControl1' is either undeclared or was never assigned.     
+ 
+      --- LinearTestControl.cs[design]  ----
+
+
+   Could not find type 'CNCTestApplication.LinearTestMovement'. Please make sure that the assembly that contains this type is referenced. If this type is a part of your development project, make sure that the project has been successfully built using settings for your current platform or Any CPU.  
+   The variable 'linearMovementTest' is either undeclared or was never assigned.     Go to code  
+
+      --- LinearTestMovement.cs[design]  ----
+
+   Could not find type 'CNCTestApplication.LinearTestTestDataSelector'. Please make sure that the assembly that contains this type is referenced. If this type is a part of your development project, make sure that the project has been successfully built using settings for your current platform or Any CPU.  
+   The variable 'linearTestTestDataSelector' is either undeclared or was never assigned. 
+
+      --- LinearTestTestDataSelector.cs[design]  ----
+
+   Could not find type 'CNCTestApplication.FileSelectComboBox'. Please make sure that the assembly that contains this type is referenced. If this type is a part of your development project, make sure that the project has been successfully built using settings for your current platform or Any CPU.       
+   The variable 'SourcePalletFileSelector' is either undeclared or was never assigned.         
+   The variable 'SensorPalletFileSelector' is either undeclared or was never assigned.      
+   The variable 'TestFileSelector' is either undeclared or was never assigned.      
+ 
+      --- FileSelectComboBox.cs[design]  ---- 
+          （ 无error）
+
+分析： 在主界面中，调用其他界面，出现error   （最后一个界面没有error，为什么不能调用）
+
+解决： ？
+
+  CNCTestApplication -- CNCTestApplication.LinearTestControl  --   *.LinearTestMovement  --  *.LinearTestTestDataSelector  
+  --  *.FileSelectComboBox
+
+
+
+6-2. 在打开cnctestapp时，在主界面出现下面的错误提示   （待完成）
+
+      ---CNCTestApplication.cs[design] ----
+
+
+   Could not find type 'CNCTestApplication.SerialPortSelectorAurora'. Please make sure that the assembly that contains this type is referenced. If this type is a part of your development project, make sure that the project has been successfully built using settings for your current platform or Any CPU. 
+    
+   
+   The variable 'serialPortSelectorAurora1' is either undeclared or was never assigned.     
+
+      --- SerialPortSelectorAurora.cs[design]  ----
+
+The designer could not be shown for this file because none of the classes within it can be designed. The designer inspected the following classes in the file: SerialPortSelectorAurora --- The base class 'CNCTestApplication.SerialPortSelector' could not be loaded. Ensure the assembly has been referenced and that all projects have been built. 
+
+      --- SerialPortSelector.cs[design]  ----
+          （ 无error）
+
+
+分析： 在主界面中，调用其他界面，出现error   （最后一个节目没有error，为什么不能调用）
+
+解决： ？
+
+  CNCTestApplication -- *.SerialPortSelectorAurora  --  *.SerialPortSelector （ 无error）
+
+
+
+6-3. 在打开cnctestapp时，在主界面出现下面的错误提示   
+
+      ---CNCTestApplication.cs[design] ----
+ 
+   Could not find type 'CNCTestApplication.SerialPortSelectorOmmo'. Please make sure that the assembly that contains this type is referenced. If this type is a part of your development project, make sure that the project has been successfully built using settings for your current platform or Any CPU.
+     
+   
+   The variable 'serialPortSelectorOmmo1' is either undeclared or was never assigned.        
+ 
+      --- SerialPortSelectorOmmo.cs[design]  ----
+
+
+    The designer could not be shown for this file because none of the classes within it can be designed. The designer inspected the following classes in the file: SerialControllerOmmo --- The base class 'CNCTestApplication.SerialControllerOmmoDLL' could not be loaded. Ensure the assembly has been referenced and that all projects have been built.    
+ 
+    
+            (SerialControllerOmmoDLL无调用  -- 是dll文件还是一个类？)
+ 
+
+分析： 在主界面中，调用其他界面，出现error   （最后一个  SerialControllerOmmoDLL无调用）
+
+解决： ？
+
+  CNCTestApplication -- *.SerialPortSelectorOmmo  --      (SerialControllerOmmoDLL无调用)
+
+
+
+
 
