@@ -61,9 +61,14 @@ Visual Studio 2022 Enterprise(企业版)：VHF9H-NXBBB-638P6-6JHCY-88JWH
 6. ok
 
 
-7. 修改 visual studio的语言包
+7. 修改 visual studio的语言包  （改为英文）
+
+   方法一： （搜索）
     。在window是的搜索里面，输入 visual studio installer
     。然后运行    visual studio installer
+
+   方法二： （直接路径运行）
+     "C:\Program Files (x86)\Microsoft Visual Studio\Installer\setup.exe"
 
 
 
